@@ -3,189 +3,170 @@ $largura-conteudo: 750px;
 $estilo-texto: uppercase;
 $tamanho-fonte-destaque: 26px;
 
-/**
-* Inicio do Corpo Estrutural
-* Composto de 4 Estruturas
-**/
+
 .corpo{
-    /*    background:blue;*/
     width: $largura-pagina;
     margin: 0 auto;
     overflow: auto;
     padding: 10px 0 0 0;
-    /*background: red;*/
-}
-
-/**
- * Estrutura 1. Banner
- */
-.corpo .banner-principal{
-    text-align: center;
-    margin: 10px 0px;
-}
-
-/**
- * Estrutura 2. Mapa do Site
- */
-.corpo .mapa-do-site ul{
-    padding: 0 10px;
-    overflow: auto;
-}
-.corpo .mapa-do-site ul li{
-    list-style: none;
-
-    float: left;
-    padding: 0;
-    margin-right: 10px;
-
-    color: black;
-    font-size: 10px
-}
-.corpo .mapa-do-site ul li a{
-    color: darkblue;
-    text-decoration: none;
-}
-.corpo .mapa-do-site ul li a:hover{
-    text-decoration: underline
-}
-
-/**
- * Estrutura 3. Menu Lateral
- */
-.corpo .estrutura-lateral{
-    width: 200px;
-    float: left;
-}
-.corpo .estrutura-lateral ul{
-    margin: 0;
-    padding: 0;
-}
-.corpo .estrutura-lateral ul.menu-destaque li{
-    margin: 0 10px;
-    padding: 3px 10px;
-    list-style: none;
-    border-top: 1px solid #ccc;
-}
-.corpo .estrutura-lateral ul.menu-destaque li:last-child{
-    border-bottom: 1px solid #ccc;
-}
-.corpo .estrutura-lateral ul.menu-destaque li a{
-    text-decoration: none;
-    font-size: 14px
-}
-
-.corpo .estrutura-lateral ul.menu-estruturado li h3{
-    border-top: 5px solid green;
-    background-color: #ccc;
-    padding: 10px;
-    padding-bottom: 20px;
-    font-size: 12px;
-    text-transform: $estilo-texto;
-}
-.corpo .estrutura-lateral ul.menu-estruturado li a{
-    color: #333;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 15px;
-    display: block;
-}
-.corpo .estrutura-lateral ul.menu-estruturado li li:first-child a{
-    padding-top: 0;
-}
-
-/**
- * Estrutura 4. Conteúdo Principal
- */
-.corpo .conteudo{
-    width: $largura-conteudo;
-    float: left;
-    margin-left: 20px;
-    /*background-color: pink;*/
-}
-
-/**
- * Notícia em Destaque
- */
-.corpo .conteudo .noticia-destaque{
-    overflow: auto;
-}
-.corpo .conteudo h3{
-    border-top: 5px solid green;
-    background-color: #ccc;
-    padding: 10px;
-    padding-bottom: 30px;
-    margin-top: 0;
-    font-size: 18px;
-    font-weight: normal;
-    text-transform: $estilo-texto;
-}
-.corpo .conteudo .noticia-destaque small{
-    text-transform: $estilo-texto;
-}
-.corpo .conteudo .noticia-destaque h4{
-    font-size: $tamanho-fonte-destaque;
-    margin: 10px 0;
-}
-.corpo .conteudo .noticia-destaque .noticia-chamada p{
-    font-size: 14px;
-}
-.corpo .conteudo .noticia-destaque a{
-    text-decoration: none;
-    color: #000;
-}
-.corpo .conteudo .noticia-destaque a:hover{
-    text-decoration: underline;
-}
-.corpo .conteudo .noticia-destaque .noticia-chamada img{
-    float: left;
-    margin-right: 20px;
-}
-.corpo .conteudo .noticia-destaque .noticia-chamada img.right{
-    float:right;
-    margin-right: 0;
-    margin-left: 20px;
-}
-.corpo .conteudo .noticia-destaque-conteudo img{
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
-.corpo .conteudo .noticia-destaque-conteudo p{
-    text-align: justify;
-}
-
-/**
- * Lista de 3 Notícias
- */
-.corpo .conteudo .noticia-lista{
-    padding-top: 20px;
-}
-.corpo .conteudo .noticia-lista ul{
-    padding: 0; margin: 0;
-}
-.corpo .conteudo .noticia-lista ul li{
-    list-style: none;
-    width: 230px;
-    float: left;
-    margin-right: 30px;
-}
-.corpo .conteudo .noticia-lista ul li:last-child{
-    margin: 0
-}
-.corpo .conteudo .noticia-lista a{
-    text-decoration: none;
-    color: #000;
-}
-.corpo .conteudo .noticia-lista a:hover{
-    text-decoration: underline;
-}
-.corpo .conteudo .noticia-lista h4{
-    font-size: 15px;
-}
-.corpo .conteudo .noticia-lista p{
-    font-size: 14px;
-}
-.corpo .conteudo .noticia-lista small{
-    font-size: 10px;
+    .banner-principal{
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .mapa-do-site ul{
+        padding: 0 10px;
+        overflow: auto;
+        li{
+            list-style: none;
+        
+            float: left;
+            padding: 0;
+            margin-right: 10px;
+        
+            color: black;
+            font-size: 10px;
+            a{
+                color: darkblue;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline
+                }
+            }
+        }
+    }
+    .estrutura-lateral{
+        width: 200px;
+        float: left;
+        ul{
+            margin: 0;
+            padding: 0;
+            &.menu-destaque{
+                li{
+                    margin: 0 10px;
+                    padding: 3px 10px;
+                    list-style: none;
+                    border-top: 1px solid #ccc;
+                    &:last-child{
+                        border-bottom: 1px solid #ccc;
+                    }
+                    a{
+                        text-decoration: none;
+                        font-size: 14px
+                    }
+                }
+            }
+            &.menu-estruturado{
+                li{
+                    h3{
+                        border-top: 5px solid green;
+                        background-color: #ccc;
+                        padding: 10px;
+                        padding-bottom: 20px;
+                        font-size: 12px;
+                        text-transform: $estilo-texto;
+                    }
+                    a{
+                        color: #333;
+                        border-bottom: 1px solid #ccc;
+                        padding: 10px 20px;
+                        text-decoration: none;
+                        font-size: 15px;
+                        display: block;
+                    }
+                    &:first-child{
+                        a{
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .conteudo{
+        width: $largura-conteudo;
+        float: left;
+        margin-left: 20px;
+        .noticia-destaque{
+            overflow: auto;
+            small{
+                text-transform: $estilo-texto;
+            }
+            h4{
+                font-size: $tamanho-fonte-destaque;
+                margin: 10px 0;
+            }
+            .noticia-chamada{
+                p{
+                    font-size: 14px;
+                }
+                img{
+                    float: left;
+                    margin-right: 20px;
+                    &.right{
+                        float:right;
+                        margin-right: 0;
+                        margin-left: 20px;
+                    }
+                }
+            }
+            a{
+                text-decoration: none;
+                color: #000;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .noticia-destaque-conteudo{
+            img{
+                float: left;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+            p{
+                text-align: justify;
+            }
+        }
+        .noticia-lista{
+            padding-top: 20px;
+            ul{
+                padding: 0; margin: 0;
+                li{
+                    list-style: none;
+                    width: 230px;
+                    float: left;
+                    margin-right: 30px;
+                    &:last-child{
+                        margin: 0
+                    }
+                }
+            }
+            a{
+                text-decoration: none;
+                color: #000;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            h4{
+                font-size: 15px;
+            }
+            p{
+                font-size: 14px;
+            }
+            small{
+                font-size: 10px;
+            }
+        }
+        h3{
+            border-top: 5px solid green;
+            background-color: #ccc;
+            padding: 10px;
+            padding-bottom: 30px;
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: normal;
+            text-transform: $estilo-texto;
+        }
+    }
 }
