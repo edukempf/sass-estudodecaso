@@ -284,4 +284,12 @@
 .rodape {
   background: yellow; }
 
+.form-ouvidoria, .form-contato {
+  padding: 50px;
+  display: block;
+  text-align: center; }
+
+.form-ouvidoria {
+  float: right; }
+
 /*# sourceMappingURL=projeto.css.map */
