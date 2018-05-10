@@ -1,0 +1,6 @@
+@mixin faq($padding: 50px) {
+    .form-faq {
+      @extend .form;
+      padding: $padding;
+    }
+}

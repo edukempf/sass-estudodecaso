@@ -1,0 +1,6 @@
+@mixin contato($padding: 50px) {
+    .form-contato {
+      @extend .form;
+      padding: $padding;
+    }
+  }

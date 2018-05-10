@@ -1,0 +1,7 @@
+@mixin ouvidoria($padding: 50px) {
+    .form-ouvidoria {
+      @extend .form;
+      padding: $padding;
+      float: right;
+    }
+  }

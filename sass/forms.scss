@@ -1,0 +1,13 @@
+$gerar-forms: true;
+@import '_list-forms';
+
+@if $gerar-forms {
+  .form {
+    padding: 50px;
+    display: block;
+    text-align: center;
+  }
+  @include contato;
+  @include ouvidoria(10px);
+  @include faq(10px);
+}
